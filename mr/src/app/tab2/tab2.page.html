@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      <div class="button">
+      <ion-button fill="clear" color="danger">update</ion-button>
+      <ion-button routerLink="/tab2" fill="clear" color="danger">charge</ion-button>
+      <ion-button fill="clear" color="danger">admin</ion-button>
+    </div>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <label for="startDate">Start Date</label><input type="date"><label for="EndDate">End Date</label><input type="date">
+  <ion-icon name="search"></ion-icon>
+  <ion-grid>
+    <ion-row>
+      <ion-col>No</ion-col>
+      <ion-col>Amount</ion-col>
+      <ion-col>Status</ion-col>
+      <ion-col>StartDate</ion-col>
+      <ion-col>EndDate</ion-col>
+    </ion-row>
+    <ion-row *ngFor="let ticket of ticketData">
+      <ion-col>{{ticket.No}}</ion-col>
+      <ion-col>{{ticket.Amount}}</ion-col>
+      <ion-col>{{ticket.Status}}</ion-col>
+      <ion-col>{{ticket.StartDate}}</ion-col>
+      <ion-col>{{ticket.EndDate}}</ion-col>
+    </ion-row>
+  </ion-grid>
+      
+</ion-content>
